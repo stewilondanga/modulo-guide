@@ -24,11 +24,12 @@ body {
   margin: 1em;
 }
 
-/*.modulo {
-  color:red;
-  font-weight:bold;
+.modulo {
+  color: red;
+  font-weight: bold;
 }
-#input {
+
+/*#input {
   margin-bottom:1em;
 }
 #fractions {
