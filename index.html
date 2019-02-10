@@ -10,64 +10,65 @@
 <body>
 
   <div class="my_social">
-      <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
-          <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
-        </a>
-      <a href="https://stewilondanga.github.io/" class="social">
-          <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
-        </a>
-      <a href="https://twitter.com/stew_ilondanga" class="social">
-          <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
-        </a>
-    </div>
+    <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
+      <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
+    </a>
+    <a href="https://stewilondanga.github.io/" class="social">
+      <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
+    </a>
+    <a href="https://twitter.com/stew_ilondanga" class="social">
+      <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
+    </a>
+  </div>
 
-    <div id="app">
-      <h1>Understanding Modulo (remainder of division)</h1>
-      <div id="input">
-        <input type="number" v-model="l" max="999" min="-999" v-on:input="calc()"> %
-        <input type="number" v-model="r" max="999" min="-999" v-on:input="calc()"> is <span class="modulo">{{m}}</span>, because...
+  <div id="app">
+    <h1>Understanding Modulo (remainder of division)</h1>
+    <div id="input">
+      <input type="number" v-model="l" max="999" min="-999" v-on:input="calc()"> %
+      <input type="number" v-model="r" max="999" min="-999" v-on:input="calc()"> is <span class="modulo">{{m}}</span>, because...
+    </div>
+    <section>
+      <span v-if="m!=0">If you have {{l}} coins, <br>
+        and want to buy items that cost {{r}} coins each,<br>
+        you could only buy {{wholes}} item<span v-if="wholes>1">s</span>,<br>
+        meaning you would only spend {{wholes*r}} coins ({{wholes}}x{{r}}), <br>
+        and still have <span class="modulo">{{m}}</span> coin<span v-if="m>1">s</span> left, the remainder ({{l}}-{{wholes*r}}).
+      </span>
+      <span v-if="m==0"> If you have {{l}} coins, <br>
+        and want to buy items that cost {{r}} coins each,<br>
+        you could buy exactly {{wholes}} item<span v-if="wholes>1">s</span>,<br>
+        but then you would have <span class="modulo">{{m}}</span> coins left
+      </span>
+    </section>
+    If you prefere, you could also think of it as fractions:
+    <div id="fractions">
+      <div id="step1">
+        <div class="top">{{l}}</div>
+        <div class="bottom">{{r}}</div>
       </div>
-      <section>
-        <span v-if="m!=0">If you have {{l}} coins, <br>
-          and want to buy items that cost {{r}} coins each,<br>
-          you could only buy {{wholes}} item<span v-if="wholes>1">s</span>,<br>
-          meaning you would only spend {{wholes*r}} coins ({{wholes}}x{{r}}), <br>
-          and still have <span class="modulo">{{m}}</span> coin<span v-if="m>1">s</span> left, the remainder ({{l}}-{{wholes*r}}).
-        </span>
-        <span v-if="m==0"> If you have {{l}} coins, <br>
-          and want to buy items that cost {{r}} coins each,<br>
-          you could buy exactly {{wholes}} item<span v-if="wholes>1">s</span>,<br>
-          but then you would have  <span class="modulo">{{m}}</span> coins left
-        </span>
-      </section>
-        If you prefere, you could also think of it as fractions:
-      <div id="fractions">
-        <div id="step1">
-          <div class="top">{{l}}</div>
+      <div id="step2">
+        <div id="arrow">is the same as</div>
+        <div id="wholes">{{parseInt(l/r)}}</div>
+        <div id="parts">
+          <div class="top"><span class="modulo">{{l%r}}</span></div>
           <div class="bottom">{{r}}</div>
         </div>
-        <div id="step2">
-          <div id="arrow">is the same as</div>
-          <div id="wholes">{{parseInt(l/r)}}</div>
-          <div id="parts">
-            <div class="top"><span class="modulo">{{l%r}}</span></div>
-            <div class="bottom">{{r}}</div>
-          </div>
-        </div>
-      </div><!-- end #fractions -->
-    </div>
+      </div>
+    </div><!-- end #fractions -->
+  </div>
 
   <section id="contact">
     <div class="overlay">
       <div class="containers">
 
         <h1>
-<script>
-with(new Date)c=-new Date(y=getFullYear(),m=getMonth()).getDay(x=new Date(y,++m,0).getDate(b=-1))
-h='<table class="cal"><caption> <em>Stewart ilondanga</em> &#169 '+' '+y+'/'+m+'<tr>'+'SuMoTuWeThFrSa'.replace(/(..)/g,'<th>$1')
-while((b++>5?b=0:b)|c<x)h+=(b?'':'<tr>')+'<td>'+(++c<1|c>x?'-':c);document.write(h+'</table>')
-</script>
-</h1>
+          <script>
+            with(new Date) c = -new Date(y = getFullYear(), m = getMonth()).getDay(x = new Date(y, ++m, 0).getDate(b = -1))
+            h = '<table class="cal"><caption> <em>Stewart ilondanga</em> &#169 ' + ' ' + y + '/' + m + '<tr>' + 'SuMoTuWeThFrSa'.replace(/(..)/g, '<th>$1')
+            while ((b++ > 5 ? b = 0 : b) | c < x) h += (b ? '' : '<tr>') + '<td>' + (++c < 1 | c > x ? '-' : c);
+            document.write(h + '</table>')
+          </script>
+        </h1>
 
       </div>
     </div>
