@@ -67,14 +67,14 @@ body {
   font-size: 2em;
 }
 
-/*#parts {
-  display:flex;
+#parts {
+  display: flex;
   flex-direction: column;
-  align-items:center;
-  justify-content:space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.containers {
+/*.containers {
   width: 520px;
   margin: 20px auto;
 }
