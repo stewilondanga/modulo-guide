@@ -33,11 +33,12 @@ body {
   margin-bottom: 1em;
 }
 
-/*#fractions {
-  display:flex;
+#fractions {
+  display: flex;
   align-items: left;
 }
-#step1{
+
+/*#step1{
   width:2em;
   text-align:center;
 }
