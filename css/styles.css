@@ -29,10 +29,11 @@ body {
   font-weight: bold;
 }
 
-/*#input {
-  margin-bottom:1em;
+#input {
+  margin-bottom: 1em;
 }
-#fractions {
+
+/*#fractions {
   display:flex;
   align-items: left;
 }
