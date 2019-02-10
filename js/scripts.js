@@ -22,11 +22,11 @@ var vy = new Vue({
           this.m = this.l % this.r;
           this.wholes = parseInt(this.q);
         },
-        /*          decimal: function(){
-                    return Number((this.q-this.wholes).toFixed(3));
-                  }
-                },
-                mounted: function(){
+        decimal: function() {
+          return Number((this.q - this.wholes).toFixed(3));
+        }
+      },
+      /*          mounted: function(){
                   this.calc();
                 }
               });
