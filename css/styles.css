@@ -18,13 +18,13 @@ body {
   height: 1.5em;
 }
 
-/*#input, #fractions, section {
-  border:solid 1px grey;
-  padding:1em;
+#input, #fractions, section {
+  border: solid 1px grey;
+  padding: 1em;
   margin: 1em;
-
 }
-.modulo {
+
+/*.modulo {
   color:red;
   font-weight:bold;
 }
