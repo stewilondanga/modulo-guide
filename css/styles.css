@@ -49,10 +49,11 @@ body {
   flex-direction: row;
 }
 
-/*#step2 > div{
-  padding:0 0.5rem;
+#step2>div {
+  padding: 0 0.5rem;
 }
-.top {
+
+/*.top {
   border-bottom: solid 2px;
 }
 #wholes, #arrow {
