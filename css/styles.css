@@ -1,4 +1,4 @@
-body {
+/*body {
   text-align: center;
   font-family: courier;
   background-image: url("../assets/image.jpeg");
@@ -19,6 +19,55 @@ body {
 
 .my_social a img {
   height: 1.5em;
+}
+
+body {
+  margin:20px;
+  font-size:200%;
+}
+#input, #fractions, section {
+  border:solid 1px grey;
+  padding:1em;
+  margin: 1em;
+
+}
+.modulo {
+  color:red;
+  font-weight:bold;
+}
+#input {
+  margin-bottom:1em;
+}
+#fractions {
+  display:flex;
+  align-items: left;
+}
+#step1{
+  width:2em;
+  text-align:center;
+}
+#step2{
+  width:13em;
+  display:flex;
+  flex-direction: row;
+}
+#step2 > div{
+  padding:0 0.5rem;
+}
+.top {
+  border-bottom: solid 2px;
+}
+#wholes, #arrow {
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+}
+#wholes {  font-size:2em; }
+#parts {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .containers {
