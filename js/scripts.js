@@ -16,17 +16,17 @@ var vy = new Vue({
         m: 0,
         wholes: 0,
       },
-      /*  methods: {
-          calc: function(){
-            this.q =  this.l/this.r;
-            this.m = this.l%this.r;
-            this.wholes = parseInt(this.q);
-          },
-          decimal: function(){
-            return Number((this.q-this.wholes).toFixed(3));
-          }
+      methods: {
+        calc: function() {
+          this.q = this.l / this.r;
+          this.m = this.l % this.r;
+          this.wholes = parseInt(this.q);
         },
-        mounted: function(){
-          this.calc();
-        }
-      });
+        /*          decimal: function(){
+                    return Number((this.q-this.wholes).toFixed(3));
+                  }
+                },
+                mounted: function(){
+                  this.calc();
+                }
+              });
