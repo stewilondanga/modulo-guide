@@ -21,6 +21,42 @@
         </a>
     </div>
 
+    <div id="app">
+      <h1>Understanding Modulo (remainder of division)</h1>
+      <div id="input">
+        <input type="number" v-model="l" max="999" min="-999" v-on:input="calc()"> %
+        <input type="number" v-model="r" max="999" min="-999" v-on:input="calc()"> is <span class="modulo">{{m}}</span>, because...
+      </div>
+      <section>
+        <span v-if="m!=0">If you have {{l}} coins, <br>
+          and want to buy items that cost {{r}} coins each,<br>
+          you could only buy {{wholes}} item<span v-if="wholes>1">s</span>,<br>
+          meaning you would only spend {{wholes*r}} coins ({{wholes}}x{{r}}), <br>
+          and still have <span class="modulo">{{m}}</span> coin<span v-if="m>1">s</span> left, the remainder ({{l}}-{{wholes*r}}).
+        </span>
+        <span v-if="m==0"> If you have {{l}} coins, <br>
+          and want to buy items that cost {{r}} coins each,<br>
+          you could buy exactly {{wholes}} item<span v-if="wholes>1">s</span>,<br>
+          but then you would have  <span class="modulo">{{m}}</span> coins left
+        </span>
+      </section>
+        If you prefere, you could also think of it as fractions:
+      <div id="fractions">
+        <div id="step1">
+          <div class="top">{{l}}</div>
+          <div class="bottom">{{r}}</div>
+        </div>
+        <div id="step2">
+          <div id="arrow">is the same as</div>
+          <div id="wholes">{{parseInt(l/r)}}</div>
+          <div id="parts">
+            <div class="top"><span class="modulo">{{l%r}}</span></div>
+            <div class="bottom">{{r}}</div>
+          </div>
+        </div>
+      </div><!-- end #fractions -->
+    </div>
+
   <section id="contact">
     <div class="overlay">
       <div class="containers">
