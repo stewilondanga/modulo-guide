@@ -57,12 +57,13 @@ body {
   border-bottom: solid 2px;
 }
 
-/*#wholes, #arrow {
-  display:flex;
+#wholes, #arrow {
+  display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
 }
-#wholes {  font-size:2em; }
+
+/*#wholes {  font-size:2em; }
 #parts {
   display:flex;
   flex-direction: column;
