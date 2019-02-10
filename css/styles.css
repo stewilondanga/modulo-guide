@@ -43,12 +43,13 @@ body {
   text-align: center;
 }
 
-/*#step2{
-  width:13em;
-  display:flex;
+#step2 {
+  width: 13em;
+  display: flex;
   flex-direction: row;
 }
-#step2 > div{
+
+/*#step2 > div{
   padding:0 0.5rem;
 }
 .top {
