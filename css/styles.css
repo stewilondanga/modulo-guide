@@ -38,11 +38,12 @@ body {
   align-items: left;
 }
 
-/*#step1{
-  width:2em;
-  text-align:center;
+#step1 {
+  width: 2em;
+  text-align: center;
 }
-#step2{
+
+/*#step2{
   width:13em;
   display:flex;
   flex-direction: row;
